@@ -1,0 +1,19 @@
+{{!--
+    Agent List View
+    @date: 10/8/2017
+    @author: FC, ES 
+
+    @params: 
+            - agents:   arr     List of Agents
+            - .name:    str     Agent's name
+            - .surname: str     Agent's surname
+            - total:    int     Total number of Agents
+--}}
+
+<h1>List of agents</h1>
+<ol>
+    {{#each agents}}
+    <li>Name: {{this.name}}, Surname: {{this.surname}}</li>
+    {{/each}}
+</ol>
+<p>Total: {{total}}</p>

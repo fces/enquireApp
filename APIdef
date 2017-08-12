@@ -1,0 +1,8 @@
+/api/agents/
+
+list                {from, to}              GET
+create              {name, surname}         POST
+read/agent_id                               GET
+update/agent_id     {name, surname}         PUT -> 204 No Content
+delete/agent_id                             DELETE -> 204 No Content
+                

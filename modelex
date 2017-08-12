@@ -1,0 +1,16 @@
+event
+    id: int
+    title: str
+    date: [date]
+    loc: [location]
+    agent: [agent]
+    cause: [event_id]
+
+date
+    date: str
+
+location
+    position: string
+
+agent
+    name: str

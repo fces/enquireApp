@@ -1,0 +1,18 @@
+{{!--
+    Agent Home View
+    @date: 10/8/2017
+    @author: FC, ES 
+    
+    @params: 
+            - notNull: bool total > 0
+            - isBiggerThanOne: bool total > 1
+            - total: int Total number of Agents
+--}}
+
+<h3>
+{{#if notNull}}There 
+    {{#if isBiggerThanOne}}are{{else}}is{{/if}} 
+    {{total}} element{{#if isBiggerThanOne}}s{{/if}}, Sirs
+{{else}}Empty DB!!1!ONE!!
+{{/if}}
+</h3>

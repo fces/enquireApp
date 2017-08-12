@@ -1,0 +1,41 @@
+{{!--
+    Location CRUD Page
+    @date: 10/8/2017
+    @author: FC, ES 
+
+--}}
+<link rel="stylesheet" href="/crud/style.css">
+<script type="text/javascript" src="/crud/locations-logic.js"></script>
+<div id="main">
+    <div id="sidebar">
+        <h3>Views Menu</h3>
+        <ul id="views-menu">
+            {{#each viewPages}}
+            <li><a href="{{this.url}}">{{this.name}}</a></li>
+            {{/each}}
+        </ul>
+    </div>
+    <div id="container">
+        <div id="toolbar">
+            <div id="create">
+                <form action="api/locations/create" method="post" enctype="text/plain">
+                    <label>Name: </label><input type="text" name="name">
+                    <label>Lat: </label><input type="text" name="lat">
+                    <label>Lon: </label><input type="text" name="lon">
+                    <input type="button" value="Add Location" onclick="createAction(this.form)">
+                </form>
+            </div>
+        </div>
+        <div id="content">       
+            <h3>Content</h3>
+            <ol id="list"></ol>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    // Start
+    populateContentList(contentListId);
+
+</script>
